@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminhometicket.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Firstname </td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Lastname</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >From</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >To</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Distance</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Valid From</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Valid To</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Price</td>
+                <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Unique Id</td>
+            </tr>
+    <% docs.forEach(item => { %>
+        <tr>
+            <td><%= item.firstname %></td>
+            <td><%= item.lastname %></td>
+            <td><%= item.from %></td>
+            <td><%= item.to %></td>
+            <td><%= item.distance %></td>
+            <td><%= item.validfrom %></td>
+            <td><%= item.validto %></td>
+            <td><%= item.price %></td>
+            <td><%= item.uid %></td>
+        </tr>
+ 
+      <% }); %>
+        </table>
+    </div>
+    <a href="/back"  > Back</a>
+</body>
+</html>

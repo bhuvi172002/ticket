@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="epasslogin.css">
+  <link rel="stylesheet" href="finalticket.css">
+</head>
+
+<body>
+  <div id="main-bg"></div>
+  <nav class="navbar">
+    <div style="margin-top: 50px;">
+
+        <li> <a href="/">Home</a> </li> 
+        <li> <a href="/ticket"> Ticket</a></li>
+        <li> <a href="/epass"> E-pass</a></li>
+        <li> <a href="/adminlogin"> Admin</a></li>
+    </div>
+    </nav>
+
+<button onclick="res()" class="toggle-btn"> <img src="card-list.svg" alt=""></button>
+
+
+  <div class="main">
+    
+    <div>
+  <form action="/pay" method="post">
+      <div class="container1">
+        <h1 style="color: aliceblue;">e-Ticket</h1>
+        <div>
+          <input style="margin: 0px; width: 270px; font-size: 10px;" name="time" readonly="readonly" type="text" value="<%=myData.time %>">
+        </div>
+        <div class="cc">
+          <input name="from" readonly="readonly" type="text" value="<%=myData.from %>">
+          To
+          <input name="to" readonly="readonly" style="margin-left: 10px;" type="text" value="<%=myData.to %> ">
+        </div>
+
+        <div class="cc">
+          Distance =
+          <input name="distance" readonly="readonly" style="margin-left: 20px;" type="number"
+            value="<%=myData.distance %>">
+          Km
+        </div>
+        <div class="cc">
+          Total fair = Rs
+          <input name="fair" readonly="readonly" style="margin-left: 20px;" type="number" value="<%=myData.fair %>">
+        </div>
+        <div class="cc">
+
+          <input readonly="readonly" type="text" name="passenger1" value="<%=myData.passenger1 %>">
+
+          <input readonly="readonly" type="text" name="passenger2" value="<%=myData.passenger2 %>">
+
+          <input readonly="readonly" name="passenger3" type="text" value="<%=myData.passenger3 %>">
+
+          <input readonly="readonly" type="text" name="passenger4" value="<%=myData.passenger4 %>">
+
+          <input readonly="readonly" type="text" name="passenger5" value="<%=myData.passenger5 %>">
+        </div>
+
+        <div class="cc">
+          <input style="  width: 200px;
+          text-align: center;
+          margin: 5px;
+          height: 30px;
+          border-radius: 5px;
+          background-color: rgba(43, 35, 35, 0.8);
+          border-style: none;
+          color: aliceblue;
+          font-size: 18px;cursor: pointer;" class="
+          ff" type="submit" value="Pay Rs <%=myData.fair %>">
+          <a class="ff , cc" href="/exit">Exit</a>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+  </form>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="adminhometicket.css">
+</head>
+<body>
+    
+    <div class="container">
+    <table>
+        <tr>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >From </td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >To</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Distance</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Fair</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Passenger 1</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Passenger 2</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Passenger 3</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Passenger 4</td>
+            <td style="font-weight: bolder; background-color: #0c350c; color: aliceblue;" >Passenger 5</td>
+        </tr>
+        <% docs.forEach(item => { %>
+            <tr>
+                <td><%= item.from %></td>
+                <td><%= item.to %></td>
+                <td><%= item.distance %></td>
+                <td><%= item.fair %></td>
+                <td><%= item.passenger1 %></td>
+                <td><%= item.passenger2 %></td>
+                <td><%= item.passenger3 %></td>
+                <td><%= item.passenger4 %></td>
+                <td><%= item.passenger5 %></td>
+            </tr>
+     
+          <% }); %>
+      
+    </table>
+</div>
+   
+
+        <a href="/back"  > Back</a>
+    
+    <!-- <ul>
+        <% docs.forEach(item => { %>
+          <li><%= item %> </li>
+        <% }); %>
+      </ul> -->
+</body>
+</html>

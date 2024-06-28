@@ -1,0 +1,74 @@
+.flname{
+font-size: 20px;
+color: aliceblue;
+padding: 7px;
+background-color: #00000080;
+/* border: 2px solid red; */
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+border-radius: 20px;
+/* flex-direction: column; */
+box-shadow: 5px 5px black ,10px 10px rgb(61, 50, 50);
+}
+
+.flname div input {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    font-size: 12px;
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+@media screen and (max-width:800px) {
+    .flname div input {
+        
+        width: 170px;
+       
+        
+    }
+}
+
+.btttn{
+    color: white;
+}
+.btttn button{
+    color: rgb(255, 255, 255);
+    width: 150px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: rgb(46, 5, 5);
+}
+.btttn input{
+    text-align: center;
+    color: aliceblue;
+    width: 100px;
+    height: 15px;
+    border-radius: 20px;
+  background-color: transparent;
+  color: aliceblue;
+}
+.btttn button:hover{
+  
+    background-color: rgb(66, 43, 43);
+}
+form input{
+    color: aliceblue;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(145, 128, 128);
+    cursor: pointer;
+}
+
+.paybtn input{
+    color: aliceblue;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(145, 128, 128);
+    cursor: pointer;
+
+}

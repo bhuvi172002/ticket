@@ -1,0 +1,217 @@
+
+.main div{
+    /* height: 420px; */
+    height: auto;
+    margin-bottom: 20px;
+    width: 99vw;
+  
+}
+#form1{
+    height: 100px;
+}
+
+#main-bg{
+    background-image: url(bg_3.JPG);
+}
+
+.desti{
+    margin-top: 40px;
+    height: 350px;
+    width: 80vw;
+    /* border: 2px solid pink; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.container{
+    /* padding: 10px; */
+    padding: 10px 10px 10px 0px;
+    /* border: 2px solid green; */
+    background-color: rgb(0,0,0,0.3);
+    box-shadow: 5px 5px black ,10px 10px rgb(61, 50, 50);
+    border-radius: 20px;
+    height: 145px;
+    width: 80vw;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+
+.container input{
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+    width: 80%;
+    text-align: center;
+    /* border-radius: 20px; */
+    position: sticky;
+    top: 0;
+}
+
+.container ul{
+    margin-top: 5px;
+    width: 70%;
+    
+}
+
+.container ul li{
+    list-style: none;
+    width: 100%;
+    /* border: 1px solid violet; */
+}
+.container ul li button{
+    font-size: 15px;
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+  width: 100%;
+  padding: 2px;
+  transition: all .3s;
+
+}
+.container ul li button:hover{
+    
+border-top-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+
+  transition: all .3s;
+
+}
+
+@media screen and (min-width:990px) {
+  
+    .container{
+     
+      
+        height: 250px;
+        width: 35vw;
+        
+    }
+}
+
+#pass-list{
+    display: flex;
+    flex-wrap: wrap;
+  
+   
+    align-items:center ;
+    justify-content: center;
+    /* width: auto; */
+}
+
+#pass-list div{
+    width: 240px;
+    /* border: 2px solid firebrick; */
+   text-align: center;
+    
+}
+.passanger{
+    background-color: rgb(0,0,0,0.5);
+    margin: 5px;
+    box-shadow: 5px 5px black ,10px 10px rgb(61, 50, 50);
+    color: rgb(167, 175, 182);
+    font-size: 20px;
+    display: flex;
+  align-items: center;
+  justify-content: center;flex-direction: column;
+  border-radius: 20px;
+  transition: all .3s;
+}
+.passanger:hover{
+transform: scale(1.1);
+    background-color: rgb(0,0,0,0.5);
+    margin: 5px;
+  
+    color: rgb(167, 175, 182);
+    font-size: 20px;
+ 
+  border-radius: 20px;
+ 
+}
+.passanger input{
+    text-align: center;
+    margin-top: 5px;
+    width: 20px;
+    font-size: 15px;
+    background-color: transparent;
+    color: aliceblue;
+}
+.passanger button{
+    width: 60%;
+    font-size: 15px;
+   margin-top: 5px;
+   border-radius: 20px;
+   background-color: black;
+   color: aliceblue;
+   transition: all .3s;
+}
+.passanger button:hover{
+background-color: rgb(37, 21, 21);
+}
+.gender{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.gender input,label{
+margin: 2px;
+
+    
+
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+
+}
+.cards div{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form1{
+    height: 50px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#form1 div{
+    
+    /* border: 2px solid rgb(75, 14, 14); */
+    width: 200px;
+    margin: 1px;
+}
+#form1 div button,#ptp{
+    color: aliceblue;
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: rgb(0,0,0,0.7);
+}
+#form1 div input{
+    text-align: center;
+    color: aliceblue;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: rgb(0,0,0,0.7);
+    margin: 5px;
+    padding: 5px;
+}

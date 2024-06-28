@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="finalpass.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="epasslogin.css">
+</head>
+
+<body>
+
+
+    <div id="main-bg"></div>
+    <nav class="navbar">
+        <div style="margin-top: 50px;">
+    
+            <li> <a href="/">Home</a> </li> 
+            <li> <a href="/ticket"> Ticket</a></li>
+            <li> <a href="/epass"> E-pass</a></li>
+            <li> <a href="/adminlogin"> Admin</a></li>
+        </div>
+        </nav>
+    
+    <button onclick="res()" class="toggle-btn"> <img src="card-list.svg" alt=""></button>
+    <div class="main">
+        <div>
+            <div class="container2">
+                <h1 style="font-size: 20px; width: 100%;text-align: center;">HRTC E-PASS</h1>
+                <h1>Unique Id: <%=myData.uid%>
+                </h1>
+                <div style="display: flex;">
+                    <h1>Name :<%=myData.firstname%>
+                            <%=myData.lastname%>
+                    </h1>
+                </div>
+                <div class="passcontent" style="display: flex;flex-direction: column;">
+                    <h1>From : <%=myData.from%>
+                    </h1>
+                    <h1 class="passcontenth1">To : <%=myData.to%>
+                    </h1>
+                </div>
+                <div class="passcontent" style="display: flex; flex-direction: column;">
+                    <h1>Valid From : <%=myData.validfrom%>
+                    </h1>
+                    <h1 class="passcontenth1">Valid To : <%=myData.validto%>
+                    </h1>
+                </div>
+                <h1>Distance : <%=myData.distance%> Km</h1>
+                <h1>Price : <%=myData.price%> Rs.</h1>
+                <div style="width: 250px;">
+                    <a href="/exit">Exit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

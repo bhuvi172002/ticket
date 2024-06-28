@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-ticket/Ticket</title>
+    <link rel="stylesheet" href="epasslogin.css">
+    <link rel="stylesheet" href="ticket.css">
+</head>
+
+<body>
+
+
+    <div id="main-bg"></div>
+    <!-- html for navigation bar -->
+    <nav class="navbar" >
+        <div style="margin-top: 50px;">
+
+            <li> <a href="/">Home</a> </li>
+            <li> <a href="/ticket"> Ticket</a></li>
+            <li> <a href="/epass"> E-pass</a></li>
+            <li> <a href="/adminlogin"> Admin</a></li>
+        </div>
+    </nav>
+
+    <button onclick="res()" class="toggle-btn"> <img src="card-list.svg" alt=""></button>
+    </nav>
+
+    <!-- html for search the destination area -->
+    <div class="main">
+        <div>
+            <section class="desti">
+
+                <section class="container">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Search Place 'From'">
+        
+                    <ul id="myUL">
+                        <li><button onclick=" oldbusstand()"> old bus stand</button></li>
+                        <li><button onclick="victorytunnel()"> victory tunnel</button></li>
+                        <li><button onclick="railwaystation()">railway station</button></li>
+                        <li><button onclick="o103()"> 103</button></li>
+                        <li><button onclick="rto()"> rto</button></li>
+                        <li><button onclick="mlacrossing()"> mla crossing</button></li>
+                        <li><button onclick="baluganj()"> baluganj</button></li>
+                        <li><button onclick="tavi()"> tavi</button></li>
+                        <li><button onclick="powerhouse()"> power house</button></li>
+                        <li><button onclick="totu()"> totu</button></li>
+                        <li><button onclick="yadgaar()"> yadgaar</button></li>
+                        <li><button onclick="dhanda()">dhanda</button></li>
+                        <li><button onclick="hiranagar()"> hiranagar</button></li>
+                        <li><button onclick="jablog()"> jablog</button></li>
+                        <li><button onclick="banooti()"> banooti</button></li>
+                        <li><button onclick="chali()"> chali</button></li>
+                        <li><button onclick=" ghanatti()"> ghanatti</button></li>
+                    </ul>
+                </section>
+        
+                <!-- <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Ticket to"> -->
+                <section class="container">
+        
+                    <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder=" Search Place 'To'">
+                    <ul id="myUL1">
+                        <li><button id="obs" onclick="oldbusstand1()"> old bus stand</button></li>
+                        <li><button id="vi" onclick="victorytunnel1()"> victory tunnel</button></li>
+                        <li><button id="rs" onclick="railwaystation1()">railway station</button></li>
+                        <li><button onclick="o1031()"> 103</button></li>
+                        <li><button onclick="rto1()"> rto</button></li>
+                        <li><button onclick="mlacrossing1()"> mla crossing</button></li>
+                        <li><button onclick=" baluganj1()"> baluganj</button></li>
+                        <li><button onclick="tavi1()"> tavi</button></li>
+                        <li><button onclick="powerhouse1()"> power house</button></li>
+                        <li><button onclick=" totu1()"> totu</button></li>
+                        <li><button onclick=" yadgaar1()"> yadgaar</button></li>
+                        <li><button onclick="dhanda1()">dhanda</button></li>
+                        <li><button onclick="hiranagar1()"> hiranagar</button></li>
+                        <li><button onclick="jablog1()"> jablog</button></li>
+                        <li><button onclick=" banooti1()"> banooti</button></li>
+                        <li><button onclick="chali1()"> chali</button></li>
+                        <li><button onclick="ghanatti1()"> ghanatti</button></li>
+                    </ul>
+                </section>
+            </section>
+
+        </div>
+
+        <div style="width: 73vw;margin: auto;">
+            <div id="pass-list">
+                <div class="passanger">
+                    <div class="passengername">Passenger 1</div>
+                    <section class="gender">
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Female</label>
+                        <input type="radio" id="child" name="gender">
+                        <label for="child">Child</label>
+                    </section>
+                    <section class="cards">
+                        <div>
+                        <input type="radio" id="smartcard" name="card">
+                        <label for="smartcard">Smart card</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="greencard" name="card">
+                        <label for="greencard">Green card</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sammancard" name="card">
+                        <label for="sammancard">Samman card</label>
+                    </div>
+                    </section>
+        
+                    <button class="done-btn" onclick="done()">Done</button>
+                    <button class="done-btn" onclick="reset()">Reset</button>
+                    <input type="text" id="total-fair" value="0" readonly="readonly">
+        
+                </div>
+        
+        
+        
+        
+        
+        
+        
+        
+                <!-- html for passanger2 area -->
+        
+                <div class="passanger">
+                    <div class="passengername">Passenger 2</div>
+                    <section class="gender">
+                        <input type="radio" id="male2" name="gender2">
+                        <label for="male2">Male</label>
+                        <input type="radio" id="female2" name="gender2">
+                        <label for="female2">Female</label>
+                        <input type="radio" id="child2" name="gender2">
+                        <label for="child2">Child</label>
+                    </section>
+                    <section class="cards">
+                        <div>
+
+                            <input type="radio" id="smartcard2" name="card2">
+                            <label for="smartcard2">Smart card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="greencard2" name="card2">
+                            <label for="greencard2">Green card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="sammancard2" name="card2">
+                            <label for="sammancard2">Samman card</label>
+                        </div>
+        
+                    </section>
+        
+                    <button class="done-btn" onclick="done2()">Done</button>
+                    <button class="done-btn" onclick="reset2()">Reset</button>
+                    <input type="text" id="total-fair2" value="0" readonly="readonly">
+        
+                </div>
+        
+        
+        
+        
+        
+        
+                <!-- html for passanger3 area -->
+        
+                <div class="passanger">
+                    <div class="passengername">Passenger 3 </div>
+                    <section class="gender">
+                        <input type="radio" id="male3" name="gender3">
+                        <label for="male3">Male</label>
+                        <input type="radio" id="female3" name="gender3">
+                        <label for="female3">Female</label>
+                        <input type="radio" id="child3" name="gender3">
+                        <label for="child3">Child</label>
+                    </section>
+                    <section class="cards">
+                        <div>
+
+                            <input type="radio" id="smartcard3" name="card3">
+                            <label for="smartcard3">Smart card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="greencard3" name="card3">
+                            <label for="greencard3">Green card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="sammancard3" name="card3">
+                            <label for="sammancard3">Samman card</label>
+                        </div>
+        
+                    </section>
+        
+                    <button class="done-btn" onclick="done3()">Done</button>
+                    <button class="done-btn" onclick="reset3()">Reset</button>
+                    <input type="text" id="total-fair3" value="0" readonly="readonly">
+        
+                </div>
+        
+        
+        
+        
+        
+        
+                <!-- html for passanger 4 area -->
+        
+                <div class="passanger">
+                    <div class="passengername">Passenger 4 </div>
+                    <section class="gender">
+                        <input type="radio" id="male4" name="gender4">
+                        <label for="male4">Male</label>
+                        <input type="radio" id="female4" name="gender4">
+                        <label for="female4">Female</label>
+                        <input type="radio" id="child4" name="gender4">
+                        <label for="child4">Child</label>
+                    </section>
+                    <section class="cards">
+                        <div>
+
+                            <input type="radio" id="smartcard4" name="card4">
+                            <label for="smartcard4">Smart card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="greencard4" name="card4">
+                            <label for="greencard4">Green card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="sammancard4" name="card4">
+                            <label for="sammancard4">Samman card</label>
+                        </div>
+        
+                    </section>
+        
+                    <button class="done-btn" onclick="done4()">Done</button>
+                    <button class="done-btn" onclick="reset4()">Reset</button>
+                    <input type="text" id="total-fair4" readonly="readonly" value="0">
+        
+                </div>
+        
+        
+        
+        
+        
+        
+                <!-- html for passanger 5 area -->
+        
+                <div class="passanger">
+                    <div class="passengername">Passenger 5 </div>
+                    <section class="gender">
+                        <input type="radio" id="male5" name="gender5">
+                        <label for="male5">Male</label>
+                        <input type="radio" id="female5" name="gender5">
+                        <label for="female5">Female</label>
+                        <input type="radio" id="child5" name="gender5">
+                        <label for="child5">Child</label>
+                    </section>
+                    <section class="cards">
+                        <div>
+
+                            <input type="radio" id="smartcard5" name="card5">
+                            <label for="smartcard5">Smart card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="greencard5" name="card5">
+                            <label for="greencard5">Green card</label>
+                        </div>
+                        <div>
+
+                            <input type="radio" id="sammancard5" name="card5">
+                            <label for="sammancard5">Samman card</label>
+                        </div>
+        
+                    </section>
+        
+                    <button class="done-btn" onclick="done5()">Done</button>
+                    <button class="done-btn" onclick="reset5()">Reset</button>
+                    <input readonly="readonly" type="text" value="0" id="total-fair5">
+        
+                </div>
+        
+               
+        
+        
+            </div>
+        
+
+        </div >
+
+        <div id="form1">
+            <div style="display: flex; flex-direction: column;">
+                <button onclick="totalfair();finalticket()">Generate Ticket</button>
+                <input placeholder="Your Total Fair" id="final-fair" readonly="readonly">
+            </div>
+            <form action="/postticket" method="post">
+
+                <input id="ptp" style="display: none;" type="submit" value=" Proceed To Pay">
+        
+                <div style="display: none;">
+        
+                    <div id="final-ticket">
+        
+                        <div>
+                            <input name="time" readonly="readonly" class="adjustelementticket"
+                                style=" width: 600px; border: none; " type="text" id="date">
+                        </div>
+                        <div style="font-weight: bolder;">
+                            <input name="from" readonly="readonly" style="margin-right: 10px;" class="adjustelementticket"
+                                type="text" id="ticketdesfrom">
+                            To
+                            <input name="to" readonly="readonly" style="margin-left: 10px;" class="adjustelementticket"
+                                type="text" id="ticketdesto">
+                        </div>
+        
+                        <div style="font-weight: bolder;">
+                            Distance =
+                            <input name="distance" readonly="readonly" style="margin-left: 20px;" class="adjustelementticket"
+                                type="number" id="disticket">
+                            Km
+                        </div>
+                        <div style="font-weight: bolder;">
+                            Total fair = Rs
+                            <input name="fair" readonly="readonly" style="margin-left: 20px;" class="adjustelementticket"
+                                type="number" id="fairticket">
+                        </div>
+        
+                        <div style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+        
+                            <input name="passenger1" readonly="readonly" style=" text-align: left; width: 450px;" type="text"
+                                id="ticketpass" class="adjustelementticket">
+                            <input name="passenger2" readonly="readonly" style=" text-align: left; width: 450px;" type="text"
+                                id="ticketpass2" class="adjustelementticket">
+                            <input name="passenger3" readonly="readonly" style=" text-align: left; width: 450px;" type="text"
+                                id="ticketpass3" class="adjustelementticket">
+                            <input name="passenger4" readonly="readonly" style=" text-align: left; width: 450px;" type="text"
+                                id="ticketpass4" class="adjustelementticket">
+                            <input name="passenger5" readonly="readonly" style=" text-align: left; width: 450px;" type="text"
+                                id="ticketpass5" class="adjustelementticket">
+                        </div>
+            </form>
+        </div>
+    </div>
+  
+
+
+
+    <div style="display: none;">
+        <input readonly="readonly" type="text" id="output">
+        <h2>To</h2>
+        <input readonly="readonly" type="text" id="output1">
+    </div>
+    <div style=" display: none;">
+        <input type="text" id="km1">
+        <input type="text" id="km2">
+        <input type="text" id="ans">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="se_func.js"></script>
+    <script src="fair_cal.js"></script>
+    <script src="finalticket.js"></script>
+</body>
+
+</html>
